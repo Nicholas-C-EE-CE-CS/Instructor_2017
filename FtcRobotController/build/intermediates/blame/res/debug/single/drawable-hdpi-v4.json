@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/jochen/Documents/Elon/2017-Robotics/AndroidCourse/Instructor_2017/FtcRobotController/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_launcher.png",
+        "source": "/Users/jochen/Documents/Elon/2017-Robotics/AndroidCourse/Instructor_2017/FtcRobotController/src/main/res/drawable-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/jochen/Documents/Elon/2017-Robotics/AndroidCourse/Instructor_2017/FtcRobotController/build/intermediates/res/merged/debug/drawable-hdpi-v4/button_shape.xml",
+        "source": "/Users/jochen/.android/build-cache/23ab2893ce1182a5a09e1cfdfe659487dea5f1bd/output/res/drawable-hdpi-v4/button_shape.xml"
+    }
+]

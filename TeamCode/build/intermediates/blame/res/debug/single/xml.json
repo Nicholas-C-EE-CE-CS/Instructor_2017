@@ -1,0 +1,42 @@
+[
+    {
+        "merged": "/Users/jochen/Documents/Elon/2017-Robotics/AndroidCourse/Instructor_2017/TeamCode/build/intermediates/res/merged/debug/xml/maxmodules.xml",
+        "source": "/Users/jochen/.android/build-cache/23ab2893ce1182a5a09e1cfdfe659487dea5f1bd/output/res/xml/maxmodules.xml"
+    },
+    {
+        "merged": "/Users/jochen/Documents/Elon/2017-Robotics/AndroidCourse/Instructor_2017/TeamCode/build/intermediates/res/merged/debug/xml/rev_scoot.xml",
+        "source": "/Users/jochen/.android/build-cache/23ab2893ce1182a5a09e1cfdfe659487dea5f1bd/output/res/xml/rev_scoot.xml"
+    },
+    {
+        "merged": "/Users/jochen/Documents/Elon/2017-Robotics/AndroidCourse/Instructor_2017/TeamCode/build/intermediates/res/merged/debug/xml/app_settings.xml",
+        "source": "/Users/jochen/Documents/Elon/2017-Robotics/AndroidCourse/Instructor_2017/FtcRobotController/build/intermediates/bundles/default/res/xml/app_settings.xml"
+    },
+    {
+        "merged": "/Users/jochen/Documents/Elon/2017-Robotics/AndroidCourse/Instructor_2017/TeamCode/build/intermediates/res/merged/debug/xml/k9legacybot.xml",
+        "source": "/Users/jochen/.android/build-cache/23ab2893ce1182a5a09e1cfdfe659487dea5f1bd/output/res/xml/k9legacybot.xml"
+    },
+    {
+        "merged": "/Users/jochen/Documents/Elon/2017-Robotics/AndroidCourse/Instructor_2017/TeamCode/build/intermediates/res/merged/debug/xml/advanced_rc_settings.xml",
+        "source": "/Users/jochen/.android/build-cache/23ab2893ce1182a5a09e1cfdfe659487dea5f1bd/output/res/xml/advanced_rc_settings.xml"
+    },
+    {
+        "merged": "/Users/jochen/Documents/Elon/2017-Robotics/AndroidCourse/Instructor_2017/TeamCode/build/intermediates/res/merged/debug/xml/pushbot.xml",
+        "source": "/Users/jochen/.android/build-cache/23ab2893ce1182a5a09e1cfdfe659487dea5f1bd/output/res/xml/pushbot.xml"
+    },
+    {
+        "merged": "/Users/jochen/Documents/Elon/2017-Robotics/AndroidCourse/Instructor_2017/TeamCode/build/intermediates/res/merged/debug/xml/pushbotsens.xml",
+        "source": "/Users/jochen/.android/build-cache/23ab2893ce1182a5a09e1cfdfe659487dea5f1bd/output/res/xml/pushbotsens.xml"
+    },
+    {
+        "merged": "/Users/jochen/Documents/Elon/2017-Robotics/AndroidCourse/Instructor_2017/TeamCode/build/intermediates/res/merged/debug/xml/device_filter.xml",
+        "source": "/Users/jochen/Documents/Elon/2017-Robotics/AndroidCourse/Instructor_2017/FtcRobotController/build/intermediates/bundles/default/res/xml/device_filter.xml"
+    },
+    {
+        "merged": "/Users/jochen/Documents/Elon/2017-Robotics/AndroidCourse/Instructor_2017/TeamCode/build/intermediates/res/merged/debug/xml/k9usbbot.xml",
+        "source": "/Users/jochen/.android/build-cache/23ab2893ce1182a5a09e1cfdfe659487dea5f1bd/output/res/xml/k9usbbot.xml"
+    },
+    {
+        "merged": "/Users/jochen/Documents/Elon/2017-Robotics/AndroidCourse/Instructor_2017/TeamCode/build/intermediates/res/merged/debug/xml/squarebot.xml",
+        "source": "/Users/jochen/.android/build-cache/23ab2893ce1182a5a09e1cfdfe659487dea5f1bd/output/res/xml/squarebot.xml"
+    }
+]
