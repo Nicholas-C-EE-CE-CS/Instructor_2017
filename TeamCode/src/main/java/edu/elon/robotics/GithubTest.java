@@ -15,7 +15,7 @@ import com.qualcomm.robotcore.util.Range;
  * @author Jochen Fischer
  */
 
-@TeleOp(name="Move with joysticks", group="Test")
+@TeleOp(name="GithubTest", group="Test")
 //@Disabled
 public class GithubTest extends LinearOpMode {
 
