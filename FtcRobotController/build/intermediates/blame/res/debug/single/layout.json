@@ -40,20 +40,20 @@
         "source": "/Users/jochen/.android/build-cache/23ab2893ce1182a5a09e1cfdfe659487dea5f1bd/output/res/layout/servo.xml"
     },
     {
-        "merged": "/Users/jochen/Documents/Elon/2017-Robotics/AndroidCourse/Instructor_2017/FtcRobotController/build/intermediates/res/merged/debug/layout/analog_inputs.xml",
-        "source": "/Users/jochen/.android/build-cache/23ab2893ce1182a5a09e1cfdfe659487dea5f1bd/output/res/layout/analog_inputs.xml"
-    },
-    {
         "merged": "/Users/jochen/Documents/Elon/2017-Robotics/AndroidCourse/Instructor_2017/FtcRobotController/build/intermediates/res/merged/debug/layout/i2c_device.xml",
         "source": "/Users/jochen/.android/build-cache/23ab2893ce1182a5a09e1cfdfe659487dea5f1bd/output/res/layout/i2c_device.xml"
     },
     {
-        "merged": "/Users/jochen/Documents/Elon/2017-Robotics/AndroidCourse/Instructor_2017/FtcRobotController/build/intermediates/res/merged/debug/layout/red_line.xml",
-        "source": "/Users/jochen/.android/build-cache/23ab2893ce1182a5a09e1cfdfe659487dea5f1bd/output/res/layout/red_line.xml"
+        "merged": "/Users/jochen/Documents/Elon/2017-Robotics/AndroidCourse/Instructor_2017/FtcRobotController/build/intermediates/res/merged/debug/layout/analog_inputs.xml",
+        "source": "/Users/jochen/.android/build-cache/23ab2893ce1182a5a09e1cfdfe659487dea5f1bd/output/res/layout/analog_inputs.xml"
     },
     {
         "merged": "/Users/jochen/Documents/Elon/2017-Robotics/AndroidCourse/Instructor_2017/FtcRobotController/build/intermediates/res/merged/debug/layout/activity_about.xml",
         "source": "/Users/jochen/.android/build-cache/23ab2893ce1182a5a09e1cfdfe659487dea5f1bd/output/res/layout/activity_about.xml"
+    },
+    {
+        "merged": "/Users/jochen/Documents/Elon/2017-Robotics/AndroidCourse/Instructor_2017/FtcRobotController/build/intermediates/res/merged/debug/layout/red_line.xml",
+        "source": "/Users/jochen/.android/build-cache/23ab2893ce1182a5a09e1cfdfe659487dea5f1bd/output/res/layout/red_line.xml"
     },
     {
         "merged": "/Users/jochen/Documents/Elon/2017-Robotics/AndroidCourse/Instructor_2017/FtcRobotController/build/intermediates/res/merged/debug/layout/lynx_module_configure_address.xml",

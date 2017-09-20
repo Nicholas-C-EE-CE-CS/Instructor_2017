@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Wed Sep 13 16:39:11 EDT 2017
+#Mon Sep 18 16:08:56 EDT 2017
 20.base=/Users/jochen/Documents/Elon/2017-Robotics/AndroidCourse/Instructor_2017/TeamCode/build/intermediates/assets/debug
 143.base=/Users/jochen/Documents/Elon/2017-Robotics/AndroidCourse/Instructor_2017/TeamCode/build/intermediates/assets/debug
 439.set=ANDROID_RESOURCE
@@ -491,7 +491,7 @@
 134.file=/Users/jochen/Documents/Elon/2017-Robotics/AndroidCourse/Instructor_2017/TeamCode/build/intermediates/res/resources-debug.ap_/res/layout/port_attached_row.xml
 305.file=/Users/jochen/Documents/Elon/2017-Robotics/AndroidCourse/Instructor_2017/TeamCode/build/intermediates/assets/debug/blockly/media/click.ogg
 44.file=/Users/jochen/Documents/Elon/2017-Robotics/AndroidCourse/Instructor_2017/TeamCode/build/intermediates/res/resources-debug.ap_/res/drawable/feedback_shape_orange.xml
-167.file=/Users/jochen/Documents/Elon/2017-Robotics/AndroidCourse/Instructor_2017/TeamCode/build/intermediates/res/resources-debug.ap_/res/raw/warningmessage.wav
+167.file=/Users/jochen/Documents/Elon/2017-Robotics/AndroidCourse/Instructor_2017/TeamCode/build/intermediates/res/resources-debug.ap_/res/layout/pwm_device.xml
 91.set=ASSET
 342.set=ASSET
 77.file=/Users/jochen/Documents/Elon/2017-Robotics/AndroidCourse/Instructor_2017/TeamCode/build/intermediates/res/resources-debug.ap_/res/layout/activity_configure_from_template.xml
@@ -501,7 +501,7 @@
 0.base=/Users/jochen/Documents/Elon/2017-Robotics/AndroidCourse/Instructor_2017/TeamCode/build/intermediates/assets/debug
 188.set=ASSET
 261.file=/Users/jochen/Documents/Elon/2017-Robotics/AndroidCourse/Instructor_2017/TeamCode/build/intermediates/assets/debug/js/jquery-3.1.1.min.js
-432.file=/Users/jochen/Documents/Elon/2017-Robotics/AndroidCourse/Instructor_2017/TeamCode/build/intermediates/res/resources-debug.ap_/res/xml/pushbotsens.xml
+432.file=/Users/jochen/Documents/Elon/2017-Robotics/AndroidCourse/Instructor_2017/TeamCode/build/intermediates/res/resources-debug.ap_/res/layout/analog_input_device.xml
 415.base=/Users/jochen/Documents/Elon/2017-Robotics/AndroidCourse/Instructor_2017/TeamCode/build/intermediates/assets/debug
 441.set=ASSET
 294.file=/Users/jochen/Documents/Elon/2017-Robotics/AndroidCourse/Instructor_2017/TeamCode/build/intermediates/assets/debug/java/js/antlr4/Lexer.js
@@ -777,7 +777,7 @@
 214.file=/Users/jochen/Documents/Elon/2017-Robotics/AndroidCourse/Instructor_2017/TeamCode/build/intermediates/assets/debug/java/js/ftclangtools.js
 99.set=ANDROID_RESOURCE
 22.set=ASSET
-247.file=/Users/jochen/Documents/Elon/2017-Robotics/AndroidCourse/Instructor_2017/TeamCode/build/intermediates/res/resources-debug.ap_/res/layout/pwms.xml
+247.file=/Users/jochen/Documents/Elon/2017-Robotics/AndroidCourse/Instructor_2017/TeamCode/build/intermediates/res/resources-debug.ap_/res/raw/texture_vertex_shader.glsl
 111.base=/Users/jochen/Documents/Elon/2017-Robotics/AndroidCourse/Instructor_2017/TeamCode/build/intermediates/assets/debug
 144.base=/Users/jochen/Documents/Elon/2017-Robotics/AndroidCourse/Instructor_2017/TeamCode/build/intermediates/assets/debug
 21.base=/Users/jochen/Documents/Elon/2017-Robotics/AndroidCourse/Instructor_2017/TeamCode/build/intermediates/assets/debug
@@ -1058,7 +1058,7 @@
 286.base=/Users/jochen/Documents/Elon/2017-Robotics/AndroidCourse/Instructor_2017/TeamCode/build/intermediates/assets/debug
 133.file=/Users/jochen/Documents/Elon/2017-Robotics/AndroidCourse/Instructor_2017/TeamCode/build/intermediates/assets/debug/FtcSounds.html
 304.file=/Users/jochen/Documents/Elon/2017-Robotics/AndroidCourse/Instructor_2017/TeamCode/build/intermediates/assets/debug/java/templates/SensorKLNavxMicro
-166.file=/Users/jochen/Documents/Elon/2017-Robotics/AndroidCourse/Instructor_2017/TeamCode/build/intermediates/res/resources-debug.ap_/res/layout/pwm_device.xml
+166.file=/Users/jochen/Documents/Elon/2017-Robotics/AndroidCourse/Instructor_2017/TeamCode/build/intermediates/res/resources-debug.ap_/res/raw/warningmessage.wav
 149.base=/Users/jochen/Documents/Elon/2017-Robotics/AndroidCourse/Instructor_2017/TeamCode/build/intermediates/assets/debug
 43.file=/Users/jochen/Documents/Elon/2017-Robotics/AndroidCourse/Instructor_2017/TeamCode/build/intermediates/assets/debug/java/css/tether.css
 81.set=ASSET
@@ -1274,7 +1274,7 @@ count=447
 7.set=NATIVE_RESOURCE
 198.set=ASSET
 262.file=/Users/jochen/Documents/Elon/2017-Robotics/AndroidCourse/Instructor_2017/TeamCode/build/intermediates/assets/debug/css/connection.less
-433.file=/Users/jochen/Documents/Elon/2017-Robotics/AndroidCourse/Instructor_2017/TeamCode/build/intermediates/res/resources-debug.ap_/res/layout/analog_input_device.xml
+433.file=/Users/jochen/Documents/Elon/2017-Robotics/AndroidCourse/Instructor_2017/TeamCode/build/intermediates/res/resources-debug.ap_/res/xml/pushbotsens.xml
 416.base=/Users/jochen/Documents/Elon/2017-Robotics/AndroidCourse/Instructor_2017/TeamCode/build/intermediates/assets/debug
 295.file=/Users/jochen/Documents/Elon/2017-Robotics/AndroidCourse/Instructor_2017/TeamCode/build/intermediates/assets/debug/blocks/analog_input.js
 278.base=/Users/jochen/Documents/Elon/2017-Robotics/AndroidCourse/Instructor_2017/TeamCode/build/intermediates/assets/debug
@@ -1337,7 +1337,7 @@ count=447
 399.base=/Users/jochen/Documents/Elon/2017-Robotics/AndroidCourse/Instructor_2017/TeamCode/build/intermediates/assets/debug
 12.set=ASSET
 229.base=/Users/jochen/Documents/Elon/2017-Robotics/AndroidCourse/Instructor_2017/TeamCode/build/intermediates/res/resources-debug.ap_
-246.file=/Users/jochen/Documents/Elon/2017-Robotics/AndroidCourse/Instructor_2017/TeamCode/build/intermediates/res/resources-debug.ap_/res/raw/texture_vertex_shader.glsl
+246.file=/Users/jochen/Documents/Elon/2017-Robotics/AndroidCourse/Instructor_2017/TeamCode/build/intermediates/res/resources-debug.ap_/res/layout/pwms.xml
 291.set=ANDROID_RESOURCE
 109.file=/Users/jochen/Documents/Elon/2017-Robotics/AndroidCourse/Instructor_2017/TeamCode/build/intermediates/assets/debug/blocks/dc_motor.js
 110.base=/Users/jochen/Documents/Elon/2017-Robotics/AndroidCourse/Instructor_2017/TeamCode/build/intermediates/res/resources-debug.ap_

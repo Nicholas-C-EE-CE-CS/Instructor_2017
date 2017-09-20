@@ -68,12 +68,12 @@
         "source": "/Users/jochen/.android/build-cache/23ab2893ce1182a5a09e1cfdfe659487dea5f1bd/output/res/layout/matrix_devices.xml"
     },
     {
-        "merged": "/Users/jochen/Documents/Elon/2017-Robotics/AndroidCourse/Instructor_2017/FtcRobotController/build/intermediates/res/merged/androidTest/debug/layout/activity_blocks.xml",
-        "source": "/Users/jochen/.android/build-cache/3126fa25f4902697416b0666860d7272fed41ea8/output/res/layout/activity_blocks.xml"
-    },
-    {
         "merged": "/Users/jochen/Documents/Elon/2017-Robotics/AndroidCourse/Instructor_2017/FtcRobotController/build/intermediates/res/merged/androidTest/debug/layout/activity_ftc_lynx_fw_update.xml",
         "source": "/Users/jochen/.android/build-cache/23ab2893ce1182a5a09e1cfdfe659487dea5f1bd/output/res/layout/activity_ftc_lynx_fw_update.xml"
+    },
+    {
+        "merged": "/Users/jochen/Documents/Elon/2017-Robotics/AndroidCourse/Instructor_2017/FtcRobotController/build/intermediates/res/merged/androidTest/debug/layout/activity_blocks.xml",
+        "source": "/Users/jochen/.android/build-cache/3126fa25f4902697416b0666860d7272fed41ea8/output/res/layout/activity_blocks.xml"
     },
     {
         "merged": "/Users/jochen/Documents/Elon/2017-Robotics/AndroidCourse/Instructor_2017/FtcRobotController/build/intermediates/res/merged/androidTest/debug/layout/feedback.xml",
@@ -88,16 +88,16 @@
         "source": "/Users/jochen/.android/build-cache/23ab2893ce1182a5a09e1cfdfe659487dea5f1bd/output/res/layout/device_interface_module.xml"
     },
     {
-        "merged": "/Users/jochen/Documents/Elon/2017-Robotics/AndroidCourse/Instructor_2017/FtcRobotController/build/intermediates/res/merged/androidTest/debug/layout/activity_ftc_wifi_remembered_groups.xml",
-        "source": "/Users/jochen/.android/build-cache/23ab2893ce1182a5a09e1cfdfe659487dea5f1bd/output/res/layout/activity_ftc_wifi_remembered_groups.xml"
+        "merged": "/Users/jochen/Documents/Elon/2017-Robotics/AndroidCourse/Instructor_2017/FtcRobotController/build/intermediates/res/merged/androidTest/debug/layout/digital_device_lynx.xml",
+        "source": "/Users/jochen/.android/build-cache/23ab2893ce1182a5a09e1cfdfe659487dea5f1bd/output/res/layout/digital_device_lynx.xml"
     },
     {
         "merged": "/Users/jochen/Documents/Elon/2017-Robotics/AndroidCourse/Instructor_2017/FtcRobotController/build/intermediates/res/merged/androidTest/debug/layout/banner_parent.xml",
         "source": "/Users/jochen/.android/build-cache/23ab2893ce1182a5a09e1cfdfe659487dea5f1bd/output/res/layout/banner_parent.xml"
     },
     {
-        "merged": "/Users/jochen/Documents/Elon/2017-Robotics/AndroidCourse/Instructor_2017/FtcRobotController/build/intermediates/res/merged/androidTest/debug/layout/digital_device_lynx.xml",
-        "source": "/Users/jochen/.android/build-cache/23ab2893ce1182a5a09e1cfdfe659487dea5f1bd/output/res/layout/digital_device_lynx.xml"
+        "merged": "/Users/jochen/Documents/Elon/2017-Robotics/AndroidCourse/Instructor_2017/FtcRobotController/build/intermediates/res/merged/androidTest/debug/layout/activity_ftc_wifi_remembered_groups.xml",
+        "source": "/Users/jochen/.android/build-cache/23ab2893ce1182a5a09e1cfdfe659487dea5f1bd/output/res/layout/activity_ftc_wifi_remembered_groups.xml"
     },
     {
         "merged": "/Users/jochen/Documents/Elon/2017-Robotics/AndroidCourse/Instructor_2017/FtcRobotController/build/intermediates/res/merged/androidTest/debug/layout/motor_list.xml",
