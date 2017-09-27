@@ -29,16 +29,6 @@ public class MoveWithEncoder extends LinearOpMode {
         // initialize the robot:
         robot.init(hardwareMap);
 
-        // TODO: on Wednesday, create function in HW class to convert inches to ticks
-        // move the robot by 24 inches:
-        double inches = 24;
-        double rotations = inches / (Math.PI * HardwareDriveBot.WHEEL_DIAMETER);
-        int encoderTarget = (int) (rotations *HardwareDriveBot.ENCODER_ROTATION_40);
-
-        telemetry.addData("Encoder Value", robot.leftMotor.getCurrentPosition());
-        telemetry.addData("Encoder Target", encoderTarget);
-        telemetry.update();
-
         // wait for the user to press the START button on the DS phone:
         waitForStart();
 
@@ -46,36 +36,28 @@ public class MoveWithEncoder extends LinearOpMode {
         // move the robot by a given distance:
         //----------------------------------------
 
-        // TODO: on Wednesday, create function in HW class to move robot
-        // turn the 2 motors on:
-        robot.start(0.3);
+        // move the robot by 24 inches:
+        double inches = 24;
+        double speed = 0.3;
 
-        // This code was used for demo purposes, see below for more compact version
-        //        int pos;
-        //        do {
-        //            pos = robot.leftMotor.getCurrentPosition();
-        //            telemetry.addData("Encoder", pos);
-        //            telemetry.update();
-        //        }
-        //        while( pos < encoderTarget );
+        moveRobot(speed, 72.0);
+        moveRobot(speed, -24.0);
 
-        // wait until the target position has been reached:
-        while (robot.leftMotor.getCurrentPosition() < encoderTarget) {
-            idle();   // hand control to Android for a short period of time
-        }
+        // or:
+        moveRobot(-speed, 24);
+        turnRobot(speed, 90);
 
-        // turn the 2 motors off:
-        robot.stop();
 
         //----------------------------------------
         // turn the robot by a given angle:
         //----------------------------------------
 
-        // TODO: code does not work, need to reset the encoders first, add function to HW class
+        robot.resetEncoders();
+
 
         double angle = 90.0;
         // TODO: WARNING: NO MAGIC NUMBERS, instead, do the math
-        encoderTarget = (int) (7.8 * angle);
+        int encoderTarget = (int) (7.8 * angle);
 
         // turn the 2 motors on:
         robot.spin(0.3);
@@ -103,5 +85,29 @@ public class MoveWithEncoder extends LinearOpMode {
         // keep program running for a few more seconds so that
         // we can read the display on the driver station phone:
         sleep(5000);
+    }
+
+    void moveRobot( double speed, double inches) {
+
+        // TODO: expand for negative speeds and/or distances
+        int encoderTarget = robot.convertInchesToTicks(inches);
+
+        robot.resetEncoders();
+
+        // turn the 2 motors on:
+        robot.start(speed);
+
+        // wait until the target position has been reached:
+        while (robot.leftMotor.getCurrentPosition() < encoderTarget) {
+            idle();   // hand control to Android for a short period of time
+        }
+
+        // turn the 2 motors off:
+        robot.stop();
+    }
+
+    // TODO: write function
+    void turnRobot( double speed, double degreed) {
+
     }
 }

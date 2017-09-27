@@ -32,9 +32,8 @@ public class HardwareDriveBot {
     public static final double WHEEL_BASE = 8.5;           // inches
 
     // other useful constants:
-    // TODO: add power levels on Wednesday
-    // STOP
-    // SLOW_POWER
+    public static final double STOP = 0.0;
+    public static final double SLOW_POWER = 0.2;
     // NORMAL_POWER
 
     //----------------------------------------------------------
@@ -63,6 +62,32 @@ public class HardwareDriveBot {
         leftMotor  = hwMap.get(DcMotor.class, "leftMotor");
         rightMotor = hwMap.get(DcMotor.class, "rightMotor");
 
+        // reset the motors:
+        resetEncoders();
+    }
+
+    /**
+     * start, stop, spin - convenience function to run and stop the robot
+     *
+     * @author Jochen Fischer
+     */
+    public void stop() {
+        leftMotor.setPower(STOP);
+        rightMotor.setPower(STOP);
+    }
+
+    public void start(double power) {
+        leftMotor.setPower(power);
+        rightMotor.setPower(power);
+    }
+
+    public void spin(double power) {
+        leftMotor.setPower(-power);
+        rightMotor.setPower(power);
+    }
+
+    // TODO: add comments...
+    public void resetEncoders() {
         // one of the motors needs to be reversed since they are mounted in opposite directions:
         leftMotor.setDirection(DcMotor.Direction.REVERSE);
         rightMotor.setDirection(DcMotor.Direction.FORWARD);
@@ -75,23 +100,13 @@ public class HardwareDriveBot {
         rightMotor.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
     }
 
-    /**
-     * start, stop, spin - convenience function to run and stop the robot
-     *
-     * @author Jochen Fischer
-     */
-    void stop() {
-        leftMotor.setPower(0.0);
-        rightMotor.setPower(0.0);
+    public int convertInchesToTicks(double inches) {
+        double rotations = inches / (Math.PI * HardwareDriveBot.WHEEL_DIAMETER);
+        int encoderTicks = (int) (rotations *HardwareDriveBot.ENCODER_ROTATION_40);
+
+        return encoderTicks;
     }
 
-    void start(double power) {
-        leftMotor.setPower(power);
-        rightMotor.setPower(power);
-    }
+    // TODO: Assignment 1 - convertDegreesToTicks
 
-    void spin(double power) {
-        leftMotor.setPower(-power);
-        rightMotor.setPower(power);
-    }
 }
