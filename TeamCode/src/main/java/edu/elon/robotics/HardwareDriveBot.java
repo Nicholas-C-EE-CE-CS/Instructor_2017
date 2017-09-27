@@ -32,7 +32,7 @@ public class HardwareDriveBot {
     public static final double WHEEL_BASE = 8.5;           // inches
 
     // other useful constants:
-    // TODO: add on Wednesday
+    // TODO: add power levels on Wednesday
     // STOP
     // SLOW_POWER
     // NORMAL_POWER

@@ -20,6 +20,9 @@ public class MoveWithEncoder extends LinearOpMode {
     // declare robot class:
     HardwareDriveBot robot = new HardwareDriveBot();
 
+    //logging tag
+    private static final String TAG = "EncoderTest";
+
     @Override
     public void runOpMode() {
 
@@ -91,13 +94,14 @@ public class MoveWithEncoder extends LinearOpMode {
         telemetry.update();
 
         // send messages to the logcat window (Android Monitor):
-        System.out.println("Encoder (left) = " + robot.leftMotor.getCurrentPosition());
-        System.out.println("Encoder (right) = " + robot.rightMotor.getCurrentPosition());
+        System.out.println(TAG + "Encoder (left) = " + robot.leftMotor.getCurrentPosition());
+        System.out.println(TAG + "Encoder (right) = " + robot.rightMotor.getCurrentPosition());
 
         // Send various and flexible messages to the logcat window (Android Monitor):
-        // TODO: introduce tags at top of each program
-        Log.i("ROBOT", "Encoder (left) = " + robot.leftMotor.getCurrentPosition());
+        Log.i(TAG, "Encoder (left) = " + robot.leftMotor.getCurrentPosition());
 
+        // keep program running for a few more seconds so that
+        // we can read the display on the driver station phone:
         sleep(5000);
     }
 }
