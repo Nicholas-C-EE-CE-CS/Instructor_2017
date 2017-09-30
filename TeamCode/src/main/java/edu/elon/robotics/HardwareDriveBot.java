@@ -12,6 +12,7 @@ import com.qualcomm.robotcore.hardware.HardwareMap;
  *
  * @author Jochen Fischer
  * @version 2 - 2017-09-25 as shown in class with some additional comments
+ * @version 3 - 2017-09-27 added functions resetEncoders() and convertInchesToTicks()
  */
 
 public class HardwareDriveBot {
@@ -34,7 +35,6 @@ public class HardwareDriveBot {
     // other useful constants:
     public static final double STOP = 0.0;
     public static final double SLOW_POWER = 0.2;
-    // NORMAL_POWER
 
     //----------------------------------------------------------
     // local member variables
@@ -62,6 +62,10 @@ public class HardwareDriveBot {
         leftMotor  = hwMap.get(DcMotor.class, "leftMotor");
         rightMotor = hwMap.get(DcMotor.class, "rightMotor");
 
+        // one of the motors needs to be reversed since they are mounted in opposite directions:
+        leftMotor.setDirection(DcMotor.Direction.REVERSE);
+        rightMotor.setDirection(DcMotor.Direction.FORWARD);
+
         // reset the motors:
         resetEncoders();
     }
@@ -86,12 +90,12 @@ public class HardwareDriveBot {
         rightMotor.setPower(power);
     }
 
-    // TODO: add comments...
+    /**
+     * Stops the robot, resets the encoders and enables the encoders.
+     *
+     * @author Jochen Fischer
+     */
     public void resetEncoders() {
-        // one of the motors needs to be reversed since they are mounted in opposite directions:
-        leftMotor.setDirection(DcMotor.Direction.REVERSE);
-        rightMotor.setDirection(DcMotor.Direction.FORWARD);
-
         // reset and use encoders:
         leftMotor.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
         rightMotor.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
@@ -100,6 +104,14 @@ public class HardwareDriveBot {
         rightMotor.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
     }
 
+    /**
+     * Convertion of travel distance to the equivalent number of motor encoder ticks.
+     *
+     * @param inches - distance the robot will move in inches
+     * @return - number of encoder ticks the motor needs to turn
+     *
+     * @author Jochen Fischer
+     */
     public int convertInchesToTicks(double inches) {
         double rotations = inches / (Math.PI * HardwareDriveBot.WHEEL_DIAMETER);
         int encoderTicks = (int) (rotations *HardwareDriveBot.ENCODER_ROTATION_40);

@@ -41,22 +41,25 @@ public class MoveWithEncoder extends LinearOpMode {
         double speed = 0.3;
 
         moveRobot(speed, 72.0);
-        moveRobot(speed, -24.0);
+
+        // TODO: negative speeds don't work yet
+        // moveRobot(speed, -24.0);
 
         // or:
-        moveRobot(-speed, 24);
+        // moveRobot(-speed, 24);
+
+        // TODO: turnRobot needs to be implemented
         turnRobot(speed, 90);
 
-
         //----------------------------------------
+        // TODO: move this whole code block into turnRobot and make it work for negative values as well
+        //
         // turn the robot by a given angle:
         //----------------------------------------
-
         robot.resetEncoders();
 
-
         double angle = 90.0;
-        // TODO: WARNING: NO MAGIC NUMBERS, instead, do the math
+        // TODO: WARNING: NO MAGIC NUMBERS, instead, do the math.
         int encoderTarget = (int) (7.8 * angle);
 
         // turn the 2 motors on:
@@ -69,6 +72,7 @@ public class MoveWithEncoder extends LinearOpMode {
 
         // turn the 2 motors off:
         robot.stop();
+        //--------------------------------------
 
         // communicate with the user:
         // telemetry goes to the driver station phone
@@ -87,6 +91,15 @@ public class MoveWithEncoder extends LinearOpMode {
         sleep(5000);
     }
 
+    /**
+     * Moves the robot by a given distance at a given speed.
+     *
+     * @param speed - speed of the robot between 0.0 and 1.0 in version 1
+     * @param inches - distance the robot moves in inches
+     *
+     * @author Jochen Fischer
+     * @version 1 - driving forward only with positive speed and positive inches
+     */
     void moveRobot( double speed, double inches) {
 
         // TODO: expand for negative speeds and/or distances
