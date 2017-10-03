@@ -1,7 +1,9 @@
 package edu.elon.robotics;
 
+import com.qualcomm.robotcore.hardware.ColorSensor;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.HardwareMap;
+import com.qualcomm.robotcore.hardware.TouchSensor;
 
 /**
  * Hardware class to define, initialize and run the robot.
@@ -36,6 +38,10 @@ public class HardwareDriveBot {
     public static final double STOP = 0.0;
     public static final double SLOW_POWER = 0.2;
 
+    //~~~~~~~~~ sensors ~~~~~~~~~~~~~~
+    public TouchSensor touchSensor = null;
+    public ColorSensor colorSensor = null;
+
     //----------------------------------------------------------
     // local member variables
     //----------------------------------------------------------
@@ -68,6 +74,11 @@ public class HardwareDriveBot {
 
         // reset the motors:
         resetEncoders();
+
+        // map sensors to hardware:
+        touchSensor = hwMap.get(TouchSensor.class, "touchSensor");
+        colorSensor = hwMap.get(ColorSensor.class, "colorSensor");
+        colorSensor.enableLed(true);
     }
 
     /**
