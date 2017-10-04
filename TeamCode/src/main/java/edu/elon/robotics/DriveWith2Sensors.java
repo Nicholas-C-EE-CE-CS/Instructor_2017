@@ -37,14 +37,18 @@ public class DriveWith2Sensors extends LinearOpMode {
         // run until the end of the match (driver presses STOP)
         while (opModeIsActive()) {
 
+            // slow movement is the default, faster with left bumper:
+            double factor = robot.SLOW_POWER;
+            if (gamepad1.left_bumper) factor = robot.FULL_POWER;
+
             // Setup a variable for each drive wheel to save power level for telemetry
             double leftPower;
             double rightPower;
 
             // POV Mode uses left stick to go forward, and right stick to turn.
             // - This uses basic math to combine motions and is easier to drive straight.
-            double drive = -gamepad1.left_stick_y;
-            double turn  =  gamepad1.right_stick_x;
+            double drive = -gamepad1.left_stick_y * factor;
+            double turn  =  gamepad1.right_stick_x * factor;
 
             telemetry.addLine()
                     .addData("drive", "%.3f", drive)

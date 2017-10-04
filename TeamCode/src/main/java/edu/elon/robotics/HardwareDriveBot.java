@@ -4,6 +4,7 @@ import com.qualcomm.robotcore.hardware.ColorSensor;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.HardwareMap;
 import com.qualcomm.robotcore.hardware.TouchSensor;
+import com.qualcomm.robotcore.hardware.UltrasonicSensor;
 
 /**
  * Hardware class to define, initialize and run the robot.
@@ -15,6 +16,8 @@ import com.qualcomm.robotcore.hardware.TouchSensor;
  * @author Jochen Fischer
  * @version 2 - 2017-09-25 as shown in class with some additional comments
  * @version 3 - 2017-09-27 added functions resetEncoders() and convertInchesToTicks()
+ * @version 4 - 2017-10-02 added light and touch sensor
+ * @version 5 - 2017-10-04 added ultrasonic sensor
  */
 
 public class HardwareDriveBot {
@@ -37,10 +40,12 @@ public class HardwareDriveBot {
     // other useful constants:
     public static final double STOP = 0.0;
     public static final double SLOW_POWER = 0.2;
+    public static final double FULL_POWER = 1.0;
 
     //~~~~~~~~~ sensors ~~~~~~~~~~~~~~
     public TouchSensor touchSensor = null;
     public ColorSensor colorSensor = null;
+    public UltrasonicSensor ultraSonic = null;
 
     //----------------------------------------------------------
     // local member variables
@@ -77,8 +82,11 @@ public class HardwareDriveBot {
 
         // map sensors to hardware:
         touchSensor = hwMap.get(TouchSensor.class, "touchSensor");
+
         colorSensor = hwMap.get(ColorSensor.class, "colorSensor");
         colorSensor.enableLed(true);
+
+        ultraSonic = hwMap.get(UltrasonicSensor.class, "ultraSonic");
     }
 
     /**

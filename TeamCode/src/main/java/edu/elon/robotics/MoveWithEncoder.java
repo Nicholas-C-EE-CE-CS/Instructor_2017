@@ -88,7 +88,12 @@ public class MoveWithEncoder extends LinearOpMode {
 
         // keep program running for a few more seconds so that
         // we can read the display on the driver station phone:
-        sleep(5000);
+        // sleep(5000);
+
+        // wait for the user to press STOP:
+        while (opModeIsActive()) {
+            idle();
+        }
     }
 
     /**
