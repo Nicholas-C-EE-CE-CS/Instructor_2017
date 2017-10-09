@@ -5,13 +5,16 @@ import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.HardwareMap;
 import com.qualcomm.robotcore.hardware.TouchSensor;
 import com.qualcomm.robotcore.hardware.UltrasonicSensor;
+import com.qualcomm.robotcore.util.ElapsedTime;
 
 /**
  * Hardware class to define, initialize and run the robot.
  *
  * The DriveBot has the following hardware installed:
- *   - motorLeft
- *   - motorRight
+ *   2 motors
+ *   1 touch sensor
+ *   1 color sensor
+ *   1 ultrasonic sensor
  *
  * @author Jochen Fischer
  * @version 2 - 2017-09-25 as shown in class with some additional comments
@@ -51,6 +54,7 @@ public class HardwareDriveBot {
     // local member variables
     //----------------------------------------------------------
     private HardwareMap hwMap = null;
+    private ElapsedTime period =  new ElapsedTime();
 
     //----------------------------------------------------------
     // functions that help operate the robot
@@ -69,6 +73,7 @@ public class HardwareDriveBot {
         // save reference to hardware map:
         hwMap = ahwMap;
 
+        //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         // map motors to hardware
         leftMotor  = hwMap.get(DcMotor.class, "leftMotor");
         rightMotor = hwMap.get(DcMotor.class, "rightMotor");
@@ -80,7 +85,8 @@ public class HardwareDriveBot {
         // reset the motors:
         resetEncoders();
 
-        // map sensors to hardware:
+        //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        // map sensors to hardware and initialize them:
         touchSensor = hwMap.get(TouchSensor.class, "touchSensor");
 
         colorSensor = hwMap.get(ColorSensor.class, "colorSensor");
@@ -131,13 +137,52 @@ public class HardwareDriveBot {
      *
      * @author Jochen Fischer
      */
-    public int convertInchesToTicks(double inches) {
-        double rotations = inches / (Math.PI * HardwareDriveBot.WHEEL_DIAMETER);
-        int encoderTicks = (int) (rotations *HardwareDriveBot.ENCODER_ROTATION_40);
+    public static int convertInchesToTicks(double inches) {
+        double wheelRotations = inches / (Math.PI * HardwareDriveBot.WHEEL_DIAMETER);
+        int encoderTicks = (int) (wheelRotations *HardwareDriveBot.ENCODER_ROTATION_40);
 
         return encoderTicks;
     }
 
-    // TODO: Assignment 1 - convertDegreesToTicks
+    /**
+     * convertDegreesToTicks - convert turn angle to encoder ticks
+     *
+     * @param degrees  turn angle of the robot, positive values are clockwise
+     * @return number of encoder ticks
+     *
+     * @author Jochen Fischer
+     */
+    public static int convertDegreesToTicks(double degrees) {
+        // distance the wheels need to travel divided by the wheel circumference:
+        double wheelRotations = (degrees / 360.0) * Math.PI * HardwareDriveBot.TRACK
+                / (Math.PI * HardwareDriveBot.WHEEL_DIAMETER);
+        int encoderTarget = (int)(wheelRotations * HardwareDriveBot.ENCODER_ROTATION_40);
 
+        return encoderTarget;
+    }
+
+    /***
+     *
+     * waitForTick implements a periodic delay. However, this acts like a metronome with a regular
+     * periodic tick.  This is used to compensate for varying processing times for each cycle.
+     * The function looks at the elapsed cycle time, and sleeps for the remaining time interval.
+     *
+     * @param periodMs  Length of wait cycle in mSec.
+     */
+    public void waitForTick(long periodMs) {
+
+        long  remaining = periodMs - (long)period.milliseconds();
+
+        // sleep for the remaining portion of the regular cycle period.
+        if (remaining > 0) {
+            try {
+                Thread.sleep(remaining);
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+            }
+        }
+
+        // Reset the cycle clock for the next pass.
+        period.reset();
+    }
 }
