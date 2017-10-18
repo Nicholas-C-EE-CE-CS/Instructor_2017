@@ -145,6 +145,22 @@ public class HardwareDriveBot {
     }
 
     /**
+     * convertTicksToInches - convert number of encoder ticks to inches traveled by the robot
+     *
+     * @author Jochen Fischer
+     * @version 1.0 - 10/1/2016
+     *
+     * @param encoderTicks  number of encoder ticks the robot has driven
+     * @return inches       distance in inches
+     */
+    public static double convertTicksToInches(int encoderTicks) {
+        double wheelRotations = (double) encoderTicks / HardwareDriveBotWithIMU.ENCODER_ROTATION_40;
+        double inches = wheelRotations * (Math.PI * HardwareDriveBotWithIMU.WHEEL_DIAMETER);
+
+        return inches;
+    }
+
+    /**
      * convertDegreesToTicks - convert turn angle to encoder ticks
      *
      * @param degrees  turn angle of the robot, positive values are clockwise
